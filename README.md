@@ -48,11 +48,11 @@ This sketch relies on the DS103 driver:
  
 ## Display
 - Define 12h/24h and AM/PM in mycfg.h
-- Define NTP discipline fetch frequency in mycfg.h, currently hourly
+- Set NTP discipline fetch frequency in zclk.ino, currently hourly. Remove if you want the ESP8266 runtime to decide.
 - On first boot, it will first show '-nTP' until it gets NTP time.
 - On subsequent boots, it will first show RTC time, then display 'nTP' until it gets NTP time.
 - Getting NTP time should be quick; if not, it's probably miconfigured 
-- When it fetches NTP time hourly it displays 'nTP'
+- When it fetches NTP time hourly it displays 'nTP' for one second.
 
 ## Installation 
 - See Maarten Pennings original GitHub for latest updates and matching hardware.  

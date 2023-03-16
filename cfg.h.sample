@@ -1,0 +1,25 @@
+#define DOT_FLAG_AM 0
+#define DOT_FLAG_PM 1
+#define DOT_FLAG_NO 2
+
+#define AP_COUNT 1
+
+struct Cfg {
+  // Access points: The clock uses internet to get time. Supply credentials for one or more WiFi access points (APs).
+  const char *ssids[AP_COUNT] = { "-ssid-" };
+  const char *passwords[AP_COUNT] = { "-password-" };
+  
+  // Time management: Time is obtained from so-called NTP servers. They provide UTC time, so also the time-zone must be entered.
+  const char *ntp_server_1 = { "-foo.example.com-" };
+  const char *ntp_server_2 = { "pool.ntp.org" };
+  const char *ntp_server_3 = { "north-america.pool.ntp.org" };
+
+  // https://www.gnu.org/software/libc/manual/html_node/TZ-Variable.html
+  // Also defined in <TZ.h> which is $ARDUINO_CORE/hardware/esp8266/3.0.2/cores/esp8266/TZ.h but can't PSTR here
+  // still it's a good reference for copy-paste to here
+  const char *timezone="PST8PDT,M3.2.0/02:00:00,M11.1.0/02:00:00"; 
+
+  // Rendering: Determines how time and date is shown on the display.
+  const int hours=24;                               // Use 24 or 12 for 24 or 12 hour clock; 
+  const int ampm_dot = DOT_FLAG_NO;                 // _AM _PM _NO to use decimal point for am or pm
+};

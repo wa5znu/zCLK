@@ -7,6 +7,9 @@ An NTP-disciplined Quartz Real-Time Clock for the ESP8266 and DS1302 based on
 - [NTP Tips and Tricks](https://www.weigu.lu/microcontroller/tips_tricks/esp_NTP_tips_tricks/index.html)
 - [Arduino ESP8266 NTP](https://werner.rothschopf.net/202011_arduino_esp8266_ntp_en.htm)
 
+
+![](zclk.jpg)
+
 All of this is due to
 [Maarten Pennings](https://github.com/maarten-pennings), who
 reverse-engineered the existing clock and then built an SDK for

@@ -34,7 +34,8 @@ RTC before NTP start time during DST, etc.
 ```
 
 Then recompile and install. For timezone, copy the text of one from `hardware/esp8266/3.0.2/cores/esp8266/TZ.h`.
-If you'd rather manage configuration with a captive-AP Web UI, you would be better served with the original nCLK).
+
+If you'd rather manage configuration with a captive-AP Web UI, you would be better served with the original nCLK.
 
 ## Libraries
 

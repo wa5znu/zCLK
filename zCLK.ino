@@ -138,10 +138,15 @@ void loop() {
     if (!sync) {
       Serial.printf("ERROR: ntp sync with bad data\n");
     } else {
+      char tzname[5];
       rtc_set(&gnow);
       disp_show("ntP");
       Serial.printf("ntp : ntp = %s", asctime(&gnow));
       Serial.printf("ntp : loc = %s", asctime(&snow));
+      delay(1000);
+      snprintf(tzname, 5, "%Z", &snow);
+      Serial.printf("ntp : tz = %s", tzname);
+      disp_show(tzname);
       delay(1000);
     }
   }

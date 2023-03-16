@@ -1,3 +1,0 @@
-10:44:57.595 -> clk : NTP sync: from_sntp = 1
-11:44:57.658 -> clk : NTP sync: from_sntp = 1
-12:44:57.679 -> clk : NTP sync: from_sntp = 1

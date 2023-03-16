@@ -134,7 +134,7 @@ void loop() {
   // When NTP synchronized - update RTC DS1302
   if( ntp_sync ) {
     ntp_sync = false;
-    Serial.printf("ntp : nyp_sync from_sntp = %d\n", from_sntp);
+    Serial.printf("ntp : ntp_sync from_sntp = %d\n", from_sntp);
     if (!sync) {
       Serial.printf("ERROR: ntp sync with bad data\n");
     } else {

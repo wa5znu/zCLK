@@ -1,10 +1,19 @@
-# WA5ZNU Version of GitHub://@maarten-pennings/303WIFILC01/nCLC
+# zCLK
 
-[Maarten Pennings](https://github.com/maarten-pennings) documents how
-he reverse-engineered the existing clock and then built an SDK for
-Arduino/ESP8266 toolchain and used that to develop several new clock sketches.
+An NTP-disciplined Quartz Real-Time Clock for the ESP8266 and DS1302 based on
+- [Maarten Pennings](https://github.com/maarten-pennings) 
+- [Utyf](https://github.com/Utyff)
+- [DS103 driver](https://github.com/Erriez/ErriezDS1302) from [Erriez](https://github.com/Erriez)
+- [NTP Tips and Tricks](https://www.weigu.lu/microcontroller/tips_tricks/esp_NTP_tips_tricks/index.html)
+- [Arduino ESP8266 NTP](https://werner.rothschopf.net/202011_arduino_esp8266_ntp_en.htm)
 
-I have taken created zCLK by taking Maarten's dCLC, which uses both
+All of this is due to
+[Maarten Pennings](https://github.com/maarten-pennings), who
+reverse-engineered the existing clock and then built an SDK for
+Arduino/ESP8266 toolchain, and used that to develop several new clock
+sketches. One of those sketches is the basis of this project.
+
+I have created zCLK by taking Maarten's dCLC, which uses both
 WiFi-based NTP and DS1302-based RTC, and hard-coded the configuration.
 I've also made a few changes to time and date handling, DST crossover,
 RTC before NTP start time during DST, etc.
@@ -16,16 +25,6 @@ RTC before NTP start time during DST, etc.
 - Removed web cfg and replaced with compile time constants in a .gitignore'd file
 - Moved Serial.printf() after time-critical sections
 - Adapted the original README to produce the rest of this README
-
-# zCLK
-
-An NTp-disciplined Quartz Real-Time Clock for the ESP8266 and DS1302 based on
-- [Maarten Pennings](https://github.com/maarten-pennings) 
-- [Utyf](https://github.com/Utyff)
-- [DS103 driver](https://github.com/Erriez/ErriezDS1302) from [Erriez](https://github.com/Erriez)
-- [NTP Tips and Tricks](https://www.weigu.lu/microcontroller/tips_tricks/esp_NTP_tips_tricks/index.html)
-- [Arduino ESP8266 NTP](https://werner.rothschopf.net/202011_arduino_esp8266_ntp_en.htm)
-
 
 ## Configuration
 
